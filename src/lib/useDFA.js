@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 
 export function useDFA(pattern) {
   const [currentState, setCurrentState] = useState(pattern.startState)
@@ -8,6 +8,12 @@ export function useDFA(pattern) {
   const isAccepted = pattern.acceptingStates.includes(currentState)
   const isTrapped = currentState === 'qtrap'
   const isEmpty = inputValue.length === 0
+
+  useEffect(() => {
+    setCurrentState(pattern.startState)
+    setHistory([])
+    setInputValue('')
+  }, [pattern])
 
   const processChar = useCallback((char, prevState, prevHistory) => {
     const nextState = pattern.transition(prevState, char, prevHistory)

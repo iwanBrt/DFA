@@ -77,6 +77,21 @@
   white-space: nowrap;
 }
 
+.navButton {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.navButton:hover {
+  border-color: var(--accent2);
+  color: var(--text);
+}
+
 .body {
   flex: 1;
   max-width: 1400px;
@@ -295,6 +310,339 @@
   background: var(--bg2);
 }
 
+.landing {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #101019, var(--bg) 620px);
+}
+
+.landingHeader {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.hero {
+  min-height: calc(100vh - 90px);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 62px 24px 72px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+}
+
+.heroDelta {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(420px, 34vw);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(165, 148, 249, 0.24);
+  background:
+    radial-gradient(circle, rgba(124, 106, 247, 0.2), rgba(124, 106, 247, 0.04) 62%, transparent 70%),
+    rgba(17, 17, 24, 0.42);
+  color: rgba(165, 148, 249, 0.42);
+  font-family: var(--mono);
+  font-size: clamp(180px, 25vw, 340px);
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 0 120px rgba(124, 106, 247, 0.18);
+  pointer-events: none;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h2 {
+  color: var(--text);
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 0.98;
+  letter-spacing: 0;
+  max-width: 920px;
+}
+
+.hero p {
+  color: var(--text2);
+  font-size: 17px;
+  max-width: 680px;
+  margin-top: 22px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.primaryButton {
+  background: var(--green);
+  color: #06110e;
+  border: 1px solid rgba(45, 212, 160, 0.8);
+}
+
+.primaryButton:hover {
+  background: #52e2b7;
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border2);
+  color: var(--text);
+}
+
+.secondaryButton:hover {
+  border-color: var(--green);
+}
+
+.formulaPreview {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.formulaPreview p {
+  margin: 0;
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 13px;
+  border: 1px solid rgba(45, 212, 160, 0.3);
+  border-radius: 8px;
+  background: rgba(45, 212, 160, 0.08);
+  padding: 8px 10px;
+}
+
+.sectionBand,
+.twoColumnSection,
+.exampleSection,
+.workflowSection,
+.userFlowSection {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 68px 24px;
+}
+
+.sectionIntro {
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+
+.sectionIntro h3,
+.twoColumnSection h3 {
+  color: var(--text);
+  font-size: 30px;
+  line-height: 1.16;
+  margin-top: 8px;
+  letter-spacing: 0;
+}
+
+.conceptGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.infoCard {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg2);
+  padding: 20px;
+}
+
+.infoCard h4 {
+  color: var(--text);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.infoCard p {
+  color: var(--text2);
+  font-size: 14px;
+}
+
+.twoColumnSection {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.mathBox {
+  margin-top: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg2);
+  padding: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.mathBox p {
+  color: var(--text2);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.mathBox strong {
+  color: var(--green);
+}
+
+.stepList {
+  display: grid;
+  gap: 10px;
+}
+
+.stepItem,
+.flowItem {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  align-items: start;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(17, 17, 24, 0.72);
+  padding: 14px;
+}
+
+.stepItem span,
+.flowItem span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--amber-bg);
+  color: var(--amber);
+  font-family: var(--mono);
+  font-weight: 800;
+}
+
+.stepItem p,
+.flowItem p {
+  color: var(--text2);
+}
+
+.calculationGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.calcTable {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg2);
+}
+
+.calcTable div {
+  display: grid;
+  grid-template-columns: 0.6fr 0.8fr 1.8fr;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text2);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.calcTable div:first-child {
+  background: var(--bg3);
+  color: var(--text);
+}
+
+.calcTable div:last-child {
+  border-bottom: 0;
+}
+
+.resultBox {
+  border: 1px solid rgba(45, 212, 160, 0.32);
+  border-radius: 8px;
+  background: var(--green-bg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.resultBox span {
+  color: var(--text3);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.resultBox strong {
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 28px;
+  margin: 6px 0;
+}
+
+.resultBox p {
+  color: var(--text2);
+}
+
+.workflowFrame {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: clamp(8px, 2vw, 18px);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.workflowFrame img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.flowGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
 @media (max-width: 900px) {
   .body {
     grid-template-columns: 1fr;
@@ -308,10 +656,72 @@
     gap: 16px;
   }
   .headerMeta { display: none; }
+  .hero {
+    min-height: auto;
+    padding-top: 42px;
+  }
+  .conceptGrid,
+  .twoColumnSection,
+  .calculationGrid,
+  .flowGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroDelta {
+    right: -72px;
+    width: min(320px, 46vw);
+    font-size: clamp(150px, 34vw, 260px);
+    opacity: 0.72;
+  }
 }
 
 @media (max-width: 600px) {
   .sidebar { grid-template-columns: 1fr; }
   .inputRow { flex-wrap: wrap; }
   .input { font-size: 13px; }
+  .landingHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+  }
+  .hero,
+  .sectionBand,
+  .twoColumnSection,
+  .exampleSection,
+  .workflowSection,
+  .userFlowSection {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .hero h2 {
+    font-size: 38px;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+  .heroDelta {
+    right: -92px;
+    top: 34px;
+    transform: none;
+    width: 220px;
+    font-size: 172px;
+    opacity: 0.34;
+  }
+  .workflowFrame {
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 6px;
+  }
+  .workflowFrame img {
+    width: 640px;
+    max-width: none;
+  }
+  .calcTable div {
+    grid-template-columns: 0.7fr 0.8fr 1.7fr;
+    font-size: 11px;
+    gap: 8px;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 6px;
+  }
 }

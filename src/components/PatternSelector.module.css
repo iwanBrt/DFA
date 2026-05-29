@@ -12,6 +12,39 @@
 
 .list { display: flex; flex-direction: column; gap: 4px; }
 
+.selectWrap {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  padding: 11px 38px 11px 12px;
+  border-radius: var(--radius);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+  appearance: none;
+}
+
+.selectWrap::after {
+  content: '⌄';
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-54%);
+  color: var(--accent2);
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.select:focus {
+  border-color: var(--accent2);
+}
+
 .item {
   display: flex;
   align-items: center;
